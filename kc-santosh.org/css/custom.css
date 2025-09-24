@@ -199,7 +199,7 @@
 
 .carousel-nav {
     position: absolute;
-    top: 50%;
+    top: 45%; /* Moved up from 50% to 45% */
     transform: translateY(-50%);
     background: transparent;
     color: #0066cc;
@@ -461,7 +461,7 @@
 }
 
 .service-item .news-text {
-    font-size: 18px; /* Increased from 16px */
+    font-size: 20px; /* Match the grants section font size */
     line-height: 1.8; /* Increased line height for better readability */
     overflow-wrap: break-word; /* Allow long words to break and wrap */
     word-wrap: break-word; /* Legacy support for word wrapping */
@@ -488,7 +488,7 @@
     }
     
     .service-item .news-text {
-        font-size: 16px; /* Larger than before */
+        font-size: 18px; /* Match grants section on tablets */
     }
 }
 
@@ -510,6 +510,6 @@
     }
     
     .service-item .news-text {
-        font-size: 15px; /* Larger than before */
+        font-size: 17px; /* Match grants section on mobile */
     }
 }

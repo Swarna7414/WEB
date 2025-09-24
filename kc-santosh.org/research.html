@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>kc's research</title>
+      <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Proxima Nova">
+      <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+      <!-- 1. Load libraries -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      <script>
+         $(document).ready(function(){
+         
+             
+        // $(".contentdiv").hide();
+        $("#homecontent").show();
+         
+         $('.nav-tabs a').click(function(){
+             $(this).tab('show');
+         
+         });
+         
+             var captionText = $("#caption");
+             $(".imgtalk").click(function () {
+                 $("#myModal").css("display","block");
+                 $("#img01").attr("src",this.src);
+                 //captionText.innerHTML = this.alt;
+             });
+         
+         
+         
+             // Get the <span> element that closes the modal
+         
+         
+             // When the user clicks on <span> (x), close the modal
+             $(".close").click(function() {
+                 $("#myModal").css("display","none");
+             });
+         
+         //slider();
+         
+         $(".leftmenucls li").on("click", function(e) {//630 422 7482
+         
+             var contenttext = $(this).attr("data-content");
+             $(".leftmenucls li").removeClass("active");
+             $(this).addClass("active");
+             $(".respcontentdiv").load(contenttext+'.html');
+             //$(".contentdiv").hide();
+             //$("#"+contenttext+"content").show();
+         });
+         
+         })
+         
+      </script>
+   </head>
+   <!-- 3. Display the application -->
+   <body>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12" style="background-color:#ededed; margin-top:60px; opacity:0.9;">
+               <span style="padding:0px; font-size:32px; color: #990000"><b>KC Santosh, PhD</b></span>
+               <br>
+               
+              <span style=" font-size: 22px;">Chair, Department of Computer Science, The University of South Dakota <br />
+Email: <a href="mailto:santosh.kc@ieee.org">santosh.kc@ieee.org</a> & <a href="mailto:santosh.kc@usd.edu">santosh.kc@usd.edu</a> <br />
+ Phone: (605) 677-3184<br /><br />
+</span>
+
+<div class="col-md-12 rightlist_logo" style="background-color:#ededed; margin-top:0px; opacity:0.9;">
+
+                        <ul>
+                           <li><a href="http://www.usd.edu/faculty-and-staff/Santosh-Kc" target="_blank"><img src="images/footer_usd.png" width="35" height="auto" alt="USD"></a></li>
+                           <li>
+                              <a href="https://www.researchgate.net/profile/KC_Santosh" target="_blank"><img src="images/footer_rg.png" width="35" height="auto" alt="ResearchGate"></a>
+                           </li>
+                           <li><a href="http://dblp.uni-trier.de/pers/ht/s/Santosh:K=_C=" target="_blank"><img src="images/footer_dblp.png" width="35" height="auto" alt="DBLP"></a></li>
+                           <li><a href="https://scholar.google.com/citations?user=luPx18QAAAAJ&hl=en" target="_blank"><img src="images/footer_gs_logo.png" width="35" height="auto" alt="Google Scholar"></a></li>
+                           <li><a href="http://orcid.org/0000-0003-4176-0236" target="_blank"><img src="images/footer_orcid_logo.png" width="35" height="auto" alt="ORCID"></a></li>
+                           <li><a href="https://www.linkedin.com/in/santoshkc" target="_blank"><img src="images/footer_linkedin.png" width="35" height="auto" alt="LinkedIn"></a></li>
+                           <li><a href="https://medium.com/@santosh.kc" target="_blank"><img src="images/footer_medium.png" width="35" height="auto" alt="Medium"></a></li>
+                            <li><a href="http://kc-santosh.org" target="_blank"><img src="images/home-page.png" width="36" height="auto" alt="Home"></a></li>
+                        </ul>
+</div>
+                        
+ <br>
+            </div>
+         </div>
+      </div>
+      
+      
+      <div class="container" style="padding-top:20px; background-color:#fff;opacity:0.9;">
+         <div class="row">
+            
+   
+<p></p>
+<div class="col-md-12" style="background-color:#efacb2; margin-top:10px; margin-right:0px;  opacity:1.0;">
+</div>
+
+<div class="col-md-12" style="background-color:#ededed; margin-top:10px; margin-right:10px; opacity:1.0;">
+       <span style=" font-size: 28px; color: #990000">Research, scholarship, and creative activity  </span>
+         
+    <div class="col-md-12" style="background-color:#ffffff; margin-top:5px; margin-right:0px; margin-bottom:10px; opacity:1.0;"></div>   
+
+    
+    <div class="col-md-5" style="background-color:#ededed; margin-top:5px; margin-right:0px; margin-bottom:10px; opacity:1.0;">    
+<span style=" font-size: 28px; color: blue">Research interest </span>
+    
+         <div class="col-md-12" style="background-color:blue; margin-top:5px; margin-right:0px; margin-bottom:10px; opacity:1.0;"></div> 
+
+                
+                 <span style=" font-size: 22px;">   
+                 <!--    <span style=" font-size: 24px;">Primary interest:</span> -->
+                     <ul>
+                         <p> 
+                 <a href ="https://en.wikipedia.org/wiki/artificial_intelligence" target="_blank">#artificialintelligence</a>,
+
+                            <a href ="https://en.wikipedia.org/wiki/Machine_learning" target="_blank">#machinelearning</a>,
+                              
+                            <a href ="https://en.wikipedia.org/wiki/Computer_vision" target="_blank">#computervision</a>, 
+                        
+                            <a href ="https://en.wikipedia.org/wiki/Pattern_recognition" target="_blank">#patternrecognition</a>,
+
+                            <a href ="https://en.wikipedia.org/wiki/Digital_image_processing" target="_blank">#datamining</a>, 
+                            <a href ="https://en.wikipedia.org/wiki/Digital_image_processing" target="_blank">#imageprocessing</a>, and
+                            <a href ="https://en.wikipedia.org/wiki/Digital_image_processing" target="_blank">#bigdata</a> 
+                         </p>
+                         
+                     </ul>
+                     <span style=" font-size: 24px;">Applications (current):</span>
+                      <ul>
+                        <p>
+                            #healthcare, #healthcareinformatics, #medicalimaging, #documentimaging, #biometrics, #forensics, #speechanalysis, #satelliteimaging, and #internetofthings.
+                        </p>
+                         
+                     </ul>
+                 </span>
+</div>  
+    <!--
+    <div class="col-md-4" style="background-color:#ededed; margin-top:5px; margin-right:0px; margin-bottom:10px; opacity:1.0;">   
+
+        
+<span style=" font-size: 28px; color: blue">Major achievements </span>
+    
+         <div class="col-md-12" style="background-color:blue; margin-top:5px; margin-right:0px; margin-bottom:10px; opacity:1.0;"></div> 
+
+                
+                 <span style=" font-size: 22px;">        
+                     
+                         <p> 
+                             1) President's <strong>#Award</strong> for Research Excellence, <a href="https://www.usd.edu/news/2019/usd-recognizes-faculty-with-the-2019-presidents-research-awards" target="_blank">USD (2019)</a> <br/>
+                             
+                2) USD Undergraduate Research Excellence Award, Office of Research & Sponsored Program (ORSP): 
+                             <ul>
+                                 a) Aliru Liu (2018): User-Driven Biomedical Text Mining (My Role: Mentor)<br>
+                                 b) Alina Chu (2019): Fingerprint Image Analysis for Security and Counterfeiting (NSF-REU project) (My Role: Mentor)
+                            </ul>
+
+                         </p>
+                     
+                 </span>
+</div>
+  
+-->
+<div class="col-md-5" style="background-color:#ededed; margin-top:5px; margin-right:0px; margin-bottom:10px; opacity:1.0;">
+
+<span style=" font-size: 28px; color:blue"> Grants </span>
+         <div class="col-md-12" style="background-color:blue; margin-top:5px; margin-right:0px; margin-bottom:10px; opacity:1.0;"></div> 
+<span style=" font-size: 20px;">        
+
+<p>
+    <span style=" font-size: 24px;">External grants + Internal grants:</span>
+    <br>
+    <span style=" font-size: 36px; font-style: bold-face; color:blue">
+        $2.1M 
+    </span>
+    
+    <span style=" font-size: 24px; font-style: bold-face">
+        as a Co-PI, Senior Personnel, Task leader, and Collaborator
+    </span>
+    
+    <!--
+    <ul>
+    a) 5 grants with approx. <strong> $320,000.00</strong> in total. <br/>
+    b) Funded by: Department of Education (<strong>#DOE</strong>); National Science Foundation (<strong>#NSF</strong>): NSF-REU and NSF-NRT; <strong>#SDCRGP</strong>; and Asian Office of Aerospace Research and Development (<strong>#AOARD</strong>).
+        
+    </ul>
+    
+<span style=" font-size: 24px;">Internal grants (9):</span> 
+    <ul>
+        a) <a href="https://www.usd.edu/gc/undergrad-research-and-creative-scholarship" target="_blank">Council for Undergraduate Research and Creative Scholarship (CURCS)</a> , USD and <br/> 
+        b) <a href="https://www.usd.edu/graduate-school/graduate-research-and-creative-scholarship-grants" target="_blank">Graduate Research and
+Creative Scholarship Grant</a>, USD.    
+    </ul>    
+    <span style=" font-size: 24px;">  Conference sponsor/grant (2): </span> 
+    <ul>
+        a) 2 Conference events sponsored with a total amount of approx. <strong> $50,000.00</strong>.
+        b) Funded by IEEE (IEEE 33rd Symposium on CBMS (Rochester, MN 2020)) and The Malta Council for Science & Technology (4th RTIP2R, 2021).
+    </ul>
+    
+-->
+ </p> 
+
+
+</div>
+            
+</div> 
+<!--
+
+<div class="col-md-12" style="background-color:#ededed; margin-top:10px; margin-right:10px; opacity:1.0;">
+       <span style=" font-size: 28px; color: blue">Books (2 (+1 in press), authored and 5, edited)</span>
+    <div></div>
+         <div class="col-md-10" style="background-color:blue; margin-top:5px; margin-right:0px; margin-bottom:10px; opacity:1.0;"></div>   
+
+
+  
+    
+<div class="col-md-10" style="background-color:#ededed; margin-top:5px; margin-right:0px; margin-bottom:10px; opacity:1.0;">
+
+<span style=" font-size: 20px;">        
+<ul>
+<p>
+<ol reversed>
+
+<li>KC Santosh: Speech/audio processing in healthcare, Springer Nature (2020 - ongoing; collaborator: H Mukherjee ...)</li>
+<li>KC Santosh, N Das, and S Ghosh: Deep Learning Models for Medical Imaging, Elsevier Academic Press, ISBN. 9780128236505, 2020</li>
+    
+<li>KC Santosh and A Joshi: COVID-19: Prediction, Decision-Making, and its Impacts, Book series in Lecture Notes on Data Engineering and Communications Technologies, Springer Nature 2020 <br/>
+    DOI: <a href="https://doi.org/10.1007/978-981-15-9682-7" target="_blank">10.1007/978-981-15-9682-7</a></li>
+    
+    
+<li>A Joshi, N Day, and KC Santosh: Intelligent Systems and Methods to Combat COVID-19, Springer Briefs in Applied Sciences and Technology ISBN: 978-981-15-6571-7 (print), 978-981-15-6572-4 (online) (2020)<br/>
+    DOI: <a href="https://doi.org/10.1007/978-981-15-6572-4" target="_blank">/978-981-15-6572-4</a></li>  
+    
+<li>Sk Obaidullah, KC Santosh, N Das, K Roy, and T Goncalves: Document Processing using Machine Learning, CRC Press ISBN: 978-036-72-1847-8 (2019) <br/>
+DOI: <a href="https://doi.org/10.1201/9780429277573" target="_blank">10.1201/9780429277573</a></li>    
+    
+    
+<li>KC Santosh, S Antani, DS Guru, and N Dey: Medical Imaging: Artificial Intelligence, Image Recognition, and Machine Learning Techniques, CRC Press, ISBN 978-036-71-3961-2 (2019) <br/>
+DOI: <a href="https://doi.org/10.1201/9780429029417" target="_blank">10.1201/9780429029417</a></li>      
+
+    
+    
+<li>KC Santosh: Document Image Analysis: Current Trends and Challenges in Graphics Recognition, Springer Nature, eISBN: 978-981-13-2339-3 and print ISBN: 978-981-13-2338-6, Springer (2018) <br/>
+DOI: <a href="https://doi.org/10.1007/978-981-13-2339-3" target="_blank">10.1007/978-981-13-2339-3</a></li>    
+</ol>
+ </p> 
+</ul>
+
+
+</div>
+    
+</div>   
+      
+         
+
+<div class="col-md-12" style="background-color:#ededed; margin-top:10px; margin-right:10px; opacity:1.0;">
+       <span style=" font-size: 28px; color: blue">Editor (journals and conference proceedings)</span>
+    <div></div>
+         <div class="col-md-10" style="background-color:blue; margin-top:5px; margin-right:0px; margin-bottom:10px; opacity:1.0;"></div>   
+
+
+<div class="col-md-10" style="background-color:#ededed; margin-top:5px; margin-right:0px; margin-bottom:10px; opacity:1.0;">
+
+<span style=" font-size: 20px;">   
+    
+    <ul>
+        <p>
+    <ol reversed>    
+    <li> KC Santosh and B Gawali: Recent trends in image processing and pattern recognition (Conference), Communications in Computer and Information Science, book series, Springer Nature, (in press, 2021) </li>
+        
+<li> A Herrera, Rodriguez KC Santosh, Z Temsgen, B Kane, and P Soda: 33rd IEEE International Symposium on Computer Based Medical Systems, IEEE Xplore (2020)<br/>
+    DOI: <a href="https://doi.org/10.1109/CBMS49503.2020" target="_blank">10.1109/CBMS49503.2020</a></li>
+
+        <li>KC Santosh and S Antani: Recent trends in image processing and pattern recognition, Multimedia Tools & Applications, Springer Vol 79(45) (2020) <br/>
+    DOI: <a href="https://doi.org/10.1007/s11042-020-10093-3" target="_blank">10.1007/s11042-020-10093-3</a></li>
+        
+        <li>KC Santosh: Advances on Deep and Machine Learning for Data Mining, Knowledge Representation,
+and Reasoning, International Journal of Ambient Computing and Intelligence, (2020)</li>
+        
+        <li>KC Santosh: Natural Language Processing in Healthcare and Medical Informatics, Information, MDPI
+(2020) <br/>
+    URL: <a href="https://www.mdpi.com/journal/information/special issues/NLP Healthcare" target="_blank">https://www.mdpi.com/journal/information/special issues/NLP Healthcare</a></li>        
+        
+<li>
+    KC Santosh and RS Hegadi: Recent trends in image processing and pattern recognition: a) computer vision and pattern recognition; b) machine learning and applications; and c) image processing, Communications in Computer and Information Science, book series, Springer Nature, Vol. 1035 (2019) <br>
+    DOI:<a href="https://doi.org/10.1007/978-981-13-9181-1" target="_blank">10.1007/978-981-13-9181-1</a></li>
+        
+    
+<li> KC Santosh and RS Hegadi: Recent trends in image processing and pattern recognition: a) healthcare and medical imaging; and b) biometrics and applications, Communications in Computer and Information Science, book series, Springer Nature, Vol. 1036 (2019)
+    <br/>
+    DOI: <a href="https://doi.org/10.1007/978-981-13-9184-2" target="_blank">10.1007/978-981-13-9184-2</a></li>
+    
+    
+<li> KC Santosh and RS Hegadi: Recent trends in image processing and pattern recognition: a) document image analysis; and b) image analysis in agriculture; and c) data mining, information retrieval and applications, Communications in Computer and Information Science, book series, Springer Nature, Vol. 1037 (2019)
+    <br/>
+    DOI: <a href="https://doi.org/10.1007/978-981-13-9187-3" target="_blank">10.1007/978-981-13-9187-3</a></li>
+    
+
+        <li> KC Santosh, S Borra, A Joshi, and N Dey: Advances on speech, music and audio signal processing, International Journal of Speech Technology, Springer (2018)
+            <br/>
+    DOI: <a href="https://doi.org/10.1007/s10772-019-09606-9" target="_blank">10.1007/s10772-019-09606-9</a></li>
+
+
+<li> KC Santosh: Recent trends in image processing and pattern recognition. International Journal of Computer Vision and Image Processing, Vol. 07 Issue. 02, IGI Global (2017)
+    <br/>
+    URL: <a href="https://www.igi-global.com/journal/international-journal-computer-vision-image/1181" target="_blank">https://www.igi-global.com/journal/international-journal-computer-vision-image/1181</a></li>
+
+<li>KC Santosh, M Hangarge, V Bevilacqua, and A Negi: Recent trends in image processing and pattern recognition, Communications in Computer and Information Science, book series, Springer Nature, Vol. 709 (2017)
+    <br/>
+    DOI: <a href="https://doi.org/10.1007/978-981-10-4859-3" target="_blank">10.1007/978-981-10-4859-3</a></li>
+    
+         
+    </ol>    
+</p> 
+</ul>
+
+
+</div>
+</div>   
+      
+    -->
+
+<div class="col-md-12" style="background-color:#ededed; margin-top:10px; margin-right:10px; opacity:1.0;">
+       <span style=" font-size: 28px; color: #990000">Publication and research talks (keynote/invited) </span>
+         
+    <div class="col-md-12" style="background-color:#ffffff; margin-top:5px; margin-right:0px; margin-bottom:10px; opacity:1.0;"></div>   
+
+    
+    <div class="col-md-4" style="background-color:#ededed; margin-top:5px; margin-right:0px; margin-bottom:10px; opacity:1.0;">    
+<span style=" font-size: 28px; color: blue">Publications statistics </span>
+    
+         <div class="col-md-12" style="background-color:blue; margin-top:5px; margin-right:0px; margin-bottom:10px; opacity:1.0;"></div> 
+
+                
+                 <span style=" font-size: 22px;">   
+                   <ul>
+                       <p> 
+                        #JournalArticles: <strong>90+</strong>; 
+                        #Proceedings: <strong>100+</strong>; 
+                        #BookChapters: <strong>11</strong>; 
+                        #Copyright: <strong>1</strong>; <br/>
+                           
+                       </p>
+                         
+                     </ul>
+                     <!--
+                        <iframe src="images/kc_publication-short-profile.pdf" type="application/pdf" width="100%" height="450" scrolling="yes" marginwidth="0" marginheight="10" frameborder="1">
+    
+                        </iframe>
+                    -->
+                     <br />
+                     <p>
+                        <strong>Important note:</strong> I wrote 90% of the journal articles end-to-end, even though I'm not the first author. All conference proceedings are peer-reviewed.
+                     </p>
+                 </span>
+</div>  
+    <div class="col-md-4" style="background-color:#ededed; margin-top:5px; margin-right:0px; margin-bottom:10px; opacity:1.0;">   
+
+        
+<span style=" font-size: 28px; color: blue">Research talks </span>
+    
+         <div class="col-md-12" style="background-color:blue; margin-top:5px; margin-right:0px; margin-bottom:10px; opacity:1.0;"></div> 
+
+                
+                 <span style=" font-size: 22px;">   
+                   <ul>
+                       <p> 
+                        #keynotes, <br/>
+                           #distinguishedTalks, <br/> 
+                           #invitedTalks: <strong>55+</strong> (total)
+                           <br /> 
+                       </p>
+                         
+                     </ul>
+                     <br />
+                     <p>
+                        <strong>Important:</strong> I don't count university talks or local talks.
+                     </p>
+                     <!--
+                     List of those talks are available here: <a href="images/kc_researchtalk-short-profile.pdf" target="_blank">kc's research talks</a>
+                     -->
+                     <!--
+                     <iframe src="images/kc_researchtalk-short-profile.pdf" type="application/pdf" width="100%" height="450" scrolling="yes" marginwidth="0" marginheight="10" frameborder="1">
+                     </iframe>
+-->
+                     
+                        
+                 </span>
+</div>
+  
+
+<div class="col-md-3" style="background-color:#ededed; margin-top:5px; margin-right:0px; margin-bottom:10px; opacity:1.0;">
+
+<span style=" font-size: 28px; color:blue"> Impact </span>
+         <div class="col-md-12" style="background-color:blue; margin-top:5px; margin-right:0px; margin-bottom:10px; opacity:1.0;"></div> 
+<span style=" font-size: 20px;">        
+
+<span style=" font-size: 22px;">   
+                   <ul>
+                       <p> 
+                        #impactfactor (total) = <strong>300+</strong> (source: 2021 JCR reports)<br/>
+                        #citations = <strong>5000+</strong> (h-index = <strong>37</strong> and i-10 index = 130+, source: google scholar)<br/>
+                       </p>
+</div>
+            
+</div> 
+
+
+
+         
+         
+         <div class="col-md-12 footercl">
+            <hr>
+            <div class="col-md-6 footercon">
+               <span style="color:blue; background-color:#e0e0e0; font-size:18px;"><a href ="http://www.usd.edu/csci" target = "blank"><b>Department of Computer Science</b></a></span>
+               <br><br>
+               <span><a href ="http://www.usd.edu" target = "blank"><b>University of South Dakota</b></a></span><br>
+               <span><b>414 E. Clark Street</b></span><br>
+               <span><b>Office #201, Arts & Sciences (Building)</b></span><br>
+               <span><b>Vermillion, SD 57069</b></span><br>
+            </div>
+            <div class="col-md-6 footerimg">
+               <!-- 
+               <img src="images/logo.png" class="img-responsive">
+                -->
+            </div>
+         </div>
+      </div>
+      <div id="myModal" class="modal">
+         <span class="close">&times;</span>
+         <img class="modal-content" id="img01">
+         <div id="caption"></div>
+      </div>
+   </body>
+</html>

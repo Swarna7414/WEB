@@ -474,7 +474,7 @@
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-    background-color: #d1d5db;
+    background-color: #9ca3af;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -485,7 +485,7 @@
 }
 
 .simple-awards-table tr:nth-child(odd) {
-    background-color: #d1d5db; /* Darker gray */
+    background-color: #9ca3af; /* Much darker gray */
 }
 
 .simple-awards-table td {
@@ -548,7 +548,7 @@
     overflow-y: auto;
     border: 1px solid #dee2e6;
     border-radius: 8px;
-    background-color: #d1d5db;
+    background-color: #9ca3af;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -574,7 +574,7 @@
     width: 100%;
     border-collapse: collapse;
     margin: 0;
-    background-color: #d1d5db;
+    background-color: #9ca3af;
 }
 
 .simple-publications-table tr:nth-child(even) {
@@ -582,7 +582,7 @@
 }
 
 .simple-publications-table tr:nth-child(odd) {
-    background-color: #d1d5db; /* Gray */
+    background-color: #9ca3af; /* Much darker gray */
 }
 
 .simple-publications-table td {
@@ -641,6 +641,111 @@
     }
     
     .publication-year {
+        width: 100px;
+        font-size: 14px;
+        padding-right: 10px;
+    }
+}
+
+/* Talks Scroll Container and Table Styling */
+.talks-scroll-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background-color: #9ca3af;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.talks-scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.talks-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.talks-scroll-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.talks-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.simple-talks-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    background-color: #9ca3af;
+}
+
+.simple-talks-table tr:nth-child(even) {
+    background-color: #ffffff; /* White */
+}
+
+.simple-talks-table tr:nth-child(odd) {
+    background-color: #9ca3af; /* Much darker gray */
+}
+
+.simple-talks-table td {
+    padding: 6px 15px;
+    font-size: 18px;
+    line-height: 1.4;
+    border: none;
+    vertical-align: top;
+}
+
+.talk-date {
+    width: 150px;
+    font-weight: 500;
+    color: #333;
+    text-align: left;
+    padding-right: 20px;
+    border-right: none;
+}
+
+.simple-talks-table td a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+.simple-talks-table td a:hover {
+    color: #004499;
+    text-decoration: none;
+}
+
+/* Responsive Design for Talks Table */
+@media (max-width: 768px) {
+    .talks-scroll-container {
+        max-height: 350px;
+    }
+    
+    .simple-talks-table td {
+        padding: 5px 12px;
+        font-size: 16px;
+    }
+    
+    .talk-date {
+        width: 130px;
+        font-size: 16px;
+        padding-right: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .talks-scroll-container {
+        max-height: 300px;
+    }
+    
+    .simple-talks-table td {
+        padding: 4px 10px;
+        font-size: 14px;
+    }
+    
+    .talk-date {
         width: 100px;
         font-size: 14px;
         padding-right: 10px;

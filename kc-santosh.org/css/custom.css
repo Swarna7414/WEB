@@ -469,6 +469,184 @@
     max-width: 100%; /* Ensure text doesn't exceed container width */
 }
 
+/* Simple Awards Table Styling */
+.simple-awards-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #d1d5db;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.simple-awards-table tr:nth-child(even) {
+    background-color: #ffffff; /* White */
+}
+
+.simple-awards-table tr:nth-child(odd) {
+    background-color: #d1d5db; /* Darker gray */
+}
+
+.simple-awards-table td {
+    padding: 6px 15px;
+    font-size: 18px;
+    line-height: 1.4;
+    border: none;
+    vertical-align: top;
+}
+
+.award-year {
+    width: 150px;
+    font-weight: 500;
+    color: #333;
+    text-align: left;
+    padding-right: 20px;
+    border-right: none;
+}
+
+.simple-awards-table td a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+.simple-awards-table td a:hover {
+    color: #004499;
+    text-decoration: none;
+}
+
+/* Responsive Design for Simple Awards Table */
+@media (max-width: 768px) {
+    .simple-awards-table td {
+        padding: 5px 12px;
+        font-size: 16px;
+    }
+    
+    .award-year {
+        width: 130px;
+        font-size: 16px;
+        padding-right: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .simple-awards-table td {
+        padding: 4px 10px;
+        font-size: 14px;
+    }
+    
+    .award-year {
+        width: 100px;
+        font-size: 14px;
+        padding-right: 10px;
+    }
+}
+
+/* Publications Scroll Container and Table Styling */
+.publications-scroll-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background-color: #d1d5db;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.publications-scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.publications-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.publications-scroll-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.publications-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.simple-publications-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    background-color: #d1d5db;
+}
+
+.simple-publications-table tr:nth-child(even) {
+    background-color: #ffffff; /* White */
+}
+
+.simple-publications-table tr:nth-child(odd) {
+    background-color: #d1d5db; /* Gray */
+}
+
+.simple-publications-table td {
+    padding: 6px 15px;
+    font-size: 18px;
+    line-height: 1.4;
+    border: none;
+    vertical-align: top;
+}
+
+.publication-year {
+    width: 150px;
+    font-weight: 500;
+    color: #333;
+    text-align: left;
+    padding-right: 20px;
+    border-right: none;
+}
+
+.simple-publications-table td a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+.simple-publications-table td a:hover {
+    color: #004499;
+    text-decoration: none;
+}
+
+/* Responsive Design for Publications Table */
+@media (max-width: 768px) {
+    .publications-scroll-container {
+        max-height: 350px;
+    }
+    
+    .simple-publications-table td {
+        padding: 5px 12px;
+        font-size: 16px;
+    }
+    
+    .publication-year {
+        width: 130px;
+        font-size: 16px;
+        padding-right: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .publications-scroll-container {
+        max-height: 300px;
+    }
+    
+    .simple-publications-table td {
+        padding: 4px 10px;
+        font-size: 14px;
+    }
+    
+    .publication-year {
+        width: 100px;
+        font-size: 14px;
+        padding-right: 10px;
+    }
+}
+
 /* Responsive Design for Professional Service Carousel */
 @media (max-width: 768px) {
     .professional-service-carousel-container {

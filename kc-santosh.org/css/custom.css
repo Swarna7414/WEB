@@ -440,7 +440,7 @@
     font-size: 28px; /* Increased from 24px */
     color: #0066cc;
     font-weight: bold;
-    margin-bottom: 20px; /* Increased spacing */
+    margin-bottom: 10px; /* Reduced spacing for more compact layout */
     display: block;
 }
 
@@ -462,7 +462,7 @@
 
 .service-item .news-text {
     font-size: 20px; /* Match the grants section font size */
-    line-height: 1.8; /* Increased line height for better readability */
+    line-height: 1.4; /* Reduced line height for more compact spacing */
     overflow-wrap: break-word; /* Allow long words to break and wrap */
     word-wrap: break-word; /* Legacy support for word wrapping */
     white-space: normal; /* Ensure text can wrap normally */
@@ -478,14 +478,17 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    opacity: 0.95; /* Make table more opaque to block background image */
 }
 
 .simple-awards-table tr:nth-child(even) {
     background-color: #ffffff; /* White */
+    opacity: 0.95; /* Ensure even rows are opaque */
 }
 
 .simple-awards-table tr:nth-child(odd) {
     background-color: #9ca3af; /* Much darker gray */
+    opacity: 0.95; /* Ensure odd rows are opaque */
 }
 
 .simple-awards-table td {

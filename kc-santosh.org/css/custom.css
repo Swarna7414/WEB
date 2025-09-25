@@ -174,18 +174,20 @@
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 100%;
+    flex-wrap: nowrap;
 }
 
 .book-item {
     flex: 0 0 auto;
-    margin: 0 10px;
+    margin: 0 5px;
     text-align: center;
-    min-width: 150px;
+    min-width: 120px;
+    max-width: 120px;
 }
 
 .book-item img {
-    width: 140px;
-    height: 200px;
+    width: 110px;
+    height: 160px;
     object-fit: cover;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -333,13 +335,14 @@
     }
     
     .book-item {
-        min-width: 120px;
-        margin: 0 5px;
+        min-width: 100px;
+        max-width: 100px;
+        margin: 0 3px;
     }
     
     .book-item img {
-        width: 120px;
-        height: 170px;
+        width: 90px;
+        height: 130px;
     }
     
     .carousel-nav {
@@ -371,13 +374,14 @@
     }
     
     .book-item {
-        min-width: 100px;
-        margin: 0 3px;
+        min-width: 80px;
+        max-width: 80px;
+        margin: 0 2px;
     }
     
     .book-item img {
-        width: 100px;
-        height: 140px;
+        width: 70px;
+        height: 100px;
     }
     
     .carousel-nav {
@@ -753,6 +757,51 @@
         font-size: 14px;
         padding-right: 10px;
     }
+}
+
+/* News Section Styles */
+.news-section {
+    margin-bottom: 20px;
+}
+
+.news-section-title {
+    font-size: 24px;
+    color: #0066cc;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.news-item {
+    font-size: 18px;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    position: relative;
+    padding-left: 20px;
+}
+
+.news-item::before {
+    content: "•";
+    color: #333;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.news-item strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.news-item a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+.news-item a:hover {
+    color: #004499;
+    text-decoration: none;
 }
 
 /* Responsive Design for Professional Service Carousel */

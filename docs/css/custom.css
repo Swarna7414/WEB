@@ -836,6 +836,89 @@
     text-decoration: none;
 }
 
+/* Grants Carousel Styles - Using same approach as Professional Service */
+.grants-carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+    padding: 0 60px; /* Reduced padding for better content positioning */
+}
+
+.grants-carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 200%; /* 2 items = 200% width */
+}
+
+.grant-item {
+    flex: 0 0 100%; /* Each item takes full width of the visible container */
+    width: 100%; /* Full width */
+    padding: 20px 30px 20px 10px; /* Reduced right padding, minimal left padding to move content right */
+    text-align: left;
+    min-height: 500px; /* Increased height */
+    background-color: transparent;
+    border-radius: 8px;
+    margin: 0;
+    box-shadow: none;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    overflow-wrap: break-word; /* Allow long words to break and wrap */
+    word-wrap: break-word; /* Legacy support for word wrapping */
+    white-space: normal; /* Ensure text can wrap normally */
+}
+
+.grant-item .news-blue {
+    font-size: 28px; /* Increased from 24px */
+    color: #0066cc;
+    font-weight: bold;
+    margin-bottom: 10px; /* Reduced spacing for more compact layout */
+    display: block;
+}
+
+.grant-content {
+    margin: 0;
+    padding-left: 25px; /* Increased padding */
+    overflow-wrap: break-word; /* Allow long words to break and wrap */
+    word-wrap: break-word; /* Legacy support for word wrapping */
+    white-space: normal; /* Ensure text can wrap normally */
+    max-width: 100%; /* Ensure content doesn't exceed container width */
+}
+
+.grant-entry {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+    line-height: 1.5;
+    overflow-wrap: break-word; /* Allow long words to break and wrap */
+    word-wrap: break-word; /* Legacy support for word wrapping */
+    white-space: normal; /* Ensure text can wrap normally */
+    max-width: 100%; /* Ensure text doesn't exceed container width */
+}
+
+.grant-entry:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.grant-entry strong {
+    color: #333;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.grant-entry a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+.grant-entry a:hover {
+    color: #004499;
+    text-decoration: none;
+}
+
 /* Responsive Design for Professional Service Carousel */
 @media (max-width: 768px) {
     .professional-service-carousel-container {
@@ -856,6 +939,23 @@
     
     .service-item .news-text {
         font-size: 18px; /* Match grants section on tablets */
+    }
+    
+    .grants-carousel-container {
+        padding: 0 50px; /* Reduced padding for tablets */
+    }
+    
+    .grant-item {
+        padding: 15px 25px 15px 8px;
+        min-height: 450px;
+    }
+    
+    .grant-entry {
+        font-size: 16px;
+    }
+    
+    .grant-entry strong {
+        font-size: 18px;
     }
 }
 
@@ -878,5 +978,22 @@
     
     .service-item .news-text {
         font-size: 17px; /* Match grants section on mobile */
+    }
+    
+    .grants-carousel-container {
+        padding: 0 40px; /* Reduced padding for mobile */
+    }
+    
+    .grant-item {
+        padding: 12px 20px 12px 6px;
+        min-height: 400px;
+    }
+    
+    .grant-entry {
+        font-size: 15px;
+    }
+    
+    .grant-entry strong {
+        font-size: 17px;
     }
 }

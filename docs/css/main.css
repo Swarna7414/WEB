@@ -31,11 +31,19 @@
             }
         }
         
-        /* For mobile devices */
+        /* For mobile devices - remove background */
         @media screen and (max-width: 768px) {
             body {
-                background-attachment: scroll;
-                background-size: cover;
+                background: none;
+                background-color: #ffffff;
+            }
+        }
+        
+        /* For tablets - also remove background */
+        @media screen and (max-width: 1024px) and (min-width: 769px) {
+            body {
+                background: none;
+                background-color: #ffffff;
             }
         }
         

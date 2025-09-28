@@ -247,45 +247,59 @@ His achievements have been recognized with awards such as the Visionary Leadersh
                     
                     <br>
                     <div class="col-md-12 divider"></div><br>
-                    <span class="news-blue">Recently Funded Grants</span>
+<!-- Grants Carousel -->
+<div class="grants-carousel-container">
+  <button class="carousel-nav prev" onclick="moveGrantsCarousel(-1)"><i class="bi bi-arrow-left-circle"></i></button>
+  <button class="carousel-nav next" onclick="moveGrantsCarousel(1)"><i class="bi bi-arrow-right-circle"></i></button>
+  
+  <div class="grants-carousel-wrapper" id="grantsCarousel">
+    <!-- First Page -->
+    <div class="grant-item">
+      <span class="news-blue">Recently Funded Grants</span>
+      <div class="grant-content">
+        <div class="grant-entry">
+          <strong>SD Biomedical Computation Collaborative (role: PI for AI)</strong><br> 
+          Agency: Department of Education <br>
+          Funding: $6.5M ( 2024 - present ) <br>
+          Role: Principal Investigator & AI Lead <br>
+          Project: <a href="https://sd-bcc.org" target="_blank">https://sd-bcc.org</a> (For more information: click <a href="https://www.usd.edu/the-south-dakotan/usd-receives-6-5-million-to-establish-south-dakota-biomedical-computation-collaborative" target="_blank">USD News</a>)
+        </div>
+        
+        <div class="grant-entry">
+          <strong>Seed Grant – SD Biomedical Computation Collaborative (role: PI for AI)</strong><br> 
+          Agency: South Dakota BOR (Board of Regents) <br>
+          Funding: $0.745M ( 2023 - present ) <br>
+          Role: Principal Investigator & AI Lead <br>
+          Project: <a href="https://sd-bcc.org" target="_blank">https://sd-bcc.org</a>
+        </div>
+      </div>
+    </div>
 
-                     <ul>
-                      <span class="news-text">
-                          
-                          <div style="border-bottom: 1px solid #ccc; padding-bottom: 15px; margin-bottom: 15px;">
-                          <strong>SD Biomedical Computation Collaborative (role: PI for AI)</strong><br> 
-                          Agency: Department of Education <br>
-                          Funding: $6.5M ( 2024 - present ) <br>
-                          Role: Principal Investigator & AI Lead <br>
-                          Project: <a href="https://sd-bcc.org" target="_blank">https://sd-bcc.org</a> (For more information: click <a href="https://www.usd.edu/the-south-dakotan/usd-receives-6-5-million-to-establish-south-dakota-biomedical-computation-collaborative" target="_blank">USD News</a>)
-                          </div>
-
-                          <div style="border-bottom: 1px solid #ccc; padding-bottom: 15px; margin-bottom: 15px;">
-                          <strong>Seed Grant – SD Biomedical Computation Collaborative (role: PI for AI)</strong><br> 
-                          Agency: South Dakota BOR (Board of Regents) <br>
-                          Funding: $0.745M ( 2023 - present ) <br>
-                          Role: Principal Investigator & AI Lead <br>
-                          Project: <a href="https://sd-bcc.org" target="_blank">https://sd-bcc.org</a>
-                          </div>
-
-                          <div style="border-bottom: 1px solid #ccc; padding-bottom: 15px; margin-bottom: 15px;">
-                          <strong>Research Infrastructure: CC Campus Compute: Lawrence 2.0*</strong><br> 
-                          Agency: National Science Foundation (NSF)<br>
-                          Funding: $0.499M (2024 onward) <br>
-                          Role: Co-Principal Investigator and Technical Lead <br>
-                          <p>Link :<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2346643" target="_blank">NSF-2346643</a></p>
-                          </div>
-
-                          <div style="padding-bottom: 15px; margin-bottom: 15px;">
-                          <strong>AI/ML Capacity Building at USD</strong><br>
-                          Agency: Department of Defense <br>
-                          Funding: $1.0M (2023–2025) <br>
-                          Role: AI Lead <br>
-                          <p>Link :<a href="https://www.defense.gov/News/Releases/Release/Article/3390690/dod-announces-awards-under-the-defense-established-program-to-stimulate-competi/" target="_blank">DOD News</a></p>
-                          </div>
-                
-          </span>
-                    </ul>
+    <!-- Second Page -->
+    <div class="grant-item">
+      <span class="news-blue">Recently Funded Grants</span>
+      <div class="grant-content">
+        <div class="grant-entry">
+          <strong>Research Infrastructure: CC Campus Compute: Lawrence 2.0*</strong><br> 
+          Agency: National Science Foundation (NSF)<br>
+          Funding: $0.499M (2024 onward) <br>
+          Role: Co-Principal Investigator and Technical Lead <br>
+          Link: <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2346643" target="_blank">NSF-2346643</a>
+        </div>
+        
+        <div class="grant-entry">
+          <strong>AI/ML Capacity Building at USD</strong><br>
+          Agency: Department of Defense <br>
+          Funding: $1.0M (2023–2025) <br>
+          Role: AI Lead <br>
+          Link: <a href="https://www.defense.gov/News/Releases/Release/Article/3390690/dod-announces-awards-under-the-defense-established-program-to-stimulate-competi/" target="_blank">DOD News</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="carousel-dots" id="grantsCarouselDots"></div>
+</div>
 <div class="col-md-12 divider"></div><br>
 
 <!-- Professional Service Carousel -->
@@ -1027,6 +1041,66 @@ His achievements have been recognized with awards such as the Visionary Leadersh
     
     // Initialize service carousel when page loads
     document.addEventListener('DOMContentLoaded', initServiceCarousel);
+  </script>
+  
+  <!-- Grants Carousel JavaScript -->
+  <script>
+    let currentGrantsSlide = 0;
+    const grantsItemsPerSlide = 1; // One grant item at a time
+    let totalGrantsSlides = 0;
+    
+    function initGrantsCarousel() {
+      const carousel = document.getElementById('grantsCarousel');
+      const items = carousel.querySelectorAll('.grant-item');
+      totalGrantsSlides = items.length;
+      
+      // Create dots
+      const dotsContainer = document.getElementById('grantsCarouselDots');
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < totalGrantsSlides; i++) {
+        const dot = document.createElement('span');
+        dot.className = 'carousel-dot';
+        if (i === 0) dot.classList.add('active');
+        dot.onclick = () => goToGrantsSlide(i);
+        dotsContainer.appendChild(dot);
+      }
+      
+      updateGrantsCarousel();
+    }
+    
+    function moveGrantsCarousel(direction) {
+      currentGrantsSlide += direction;
+      
+      if (currentGrantsSlide < 0) {
+        currentGrantsSlide = totalGrantsSlides - 1;
+      } else if (currentGrantsSlide >= totalGrantsSlides) {
+        currentGrantsSlide = 0;
+      }
+      
+      updateGrantsCarousel();
+    }
+    
+    function goToGrantsSlide(slideIndex) {
+      currentGrantsSlide = slideIndex;
+      updateGrantsCarousel();
+    }
+    
+    function updateGrantsCarousel() {
+      const carousel = document.getElementById('grantsCarousel');
+      const translateX = -currentGrantsSlide * 100; // Each slide moves by 100% of the visible container
+      carousel.style.transform = `translateX(${translateX}%)`;
+      
+      console.log('Grants carousel - Current slide:', currentGrantsSlide, 'TranslateX:', translateX);
+      
+      // Update dots
+      const dots = document.querySelectorAll('#grantsCarouselDots .carousel-dot');
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentGrantsSlide);
+      });
+    }
+    
+    // Initialize grants carousel when page loads
+    document.addEventListener('DOMContentLoaded', initGrantsCarousel);
   </script>
   
   <!-- Auto-scroll functionality for Publications and Talks -->

@@ -473,16 +473,40 @@
     max-width: 100%; /* Ensure text doesn't exceed container width */
 }
 
+/* Awards Scroll Container and Table Styling */
+.awards-scroll-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background-color: #9ca3af;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.awards-scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.awards-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.awards-scroll-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.awards-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 /* Simple Awards Table Styling */
 .simple-awards-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 0;
     background-color: #9ca3af;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    opacity: 0.95; /* Make table more opaque to block background image */
 }
 
 .simple-awards-table tr:nth-child(even) {
@@ -522,8 +546,12 @@
     text-decoration: none;
 }
 
-/* Responsive Design for Simple Awards Table */
+/* Responsive Design for Awards Table */
 @media (max-width: 768px) {
+    .awards-scroll-container {
+        max-height: 350px;
+    }
+    
     .simple-awards-table td {
         padding: 5px 12px;
         font-size: 16px;
@@ -537,6 +565,10 @@
 }
 
 @media (max-width: 480px) {
+    .awards-scroll-container {
+        max-height: 300px;
+    }
+    
     .simple-awards-table td {
         padding: 4px 10px;
         font-size: 14px;

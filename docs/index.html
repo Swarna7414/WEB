@@ -877,7 +877,7 @@ His achievements have been recognized with awards such as the Visionary Leadersh
             <span class="news-text" style="font-size: 20px;">
               <a href="http://www.usd.edu/csci" target="_blank">Department of Computer Science,</a><br>
               <a href="http://www.usd.edu" target="_blank">The University of South Dakota,</a><br>
-              414 E. Clark Street<br>
+              414 E. Clark Street,<br>
               Office #201,<br> Arts & Sciences<br>
               Vermillion, SD 57069
             </span>
@@ -1106,80 +1106,6 @@ His achievements have been recognized with awards such as the Visionary Leadersh
     document.addEventListener('DOMContentLoaded', initGrantsCarousel);
   </script>
   
-  <!-- Auto-scroll functionality for Publications and Talks -->
-  <script>
-    let publicationsScrollInterval;
-    let talksScrollInterval;
-    let publicationsScrollPosition = 0;
-    let talksScrollPosition = 0;
-    const scrollSpeed = 1; // pixels per frame
-    const scrollDelay = 50; // milliseconds between scroll updates
-    
-    function initAutoScroll() {
-      const publicationsContainer = document.querySelector('.publications-scroll-container');
-      const talksContainer = document.querySelector('.talks-scroll-container');
-      
-      if (publicationsContainer) {
-        startPublicationsAutoScroll();
-      }
-      
-      if (talksContainer) {
-        startTalksAutoScroll();
-      }
-    }
-    
-    function startPublicationsAutoScroll() {
-      const container = document.querySelector('.publications-scroll-container');
-      if (!container) return;
-      
-      // Pause on hover
-      container.addEventListener('mouseenter', () => {
-        clearInterval(publicationsScrollInterval);
-      });
-      
-      container.addEventListener('mouseleave', () => {
-        startPublicationsAutoScroll();
-      });
-      
-      publicationsScrollInterval = setInterval(() => {
-        publicationsScrollPosition += scrollSpeed;
-        const maxScroll = container.scrollHeight - container.clientHeight;
-        
-        if (publicationsScrollPosition >= maxScroll) {
-          publicationsScrollPosition = 0; // Reset to top
-        }
-        
-        container.scrollTop = publicationsScrollPosition;
-      }, scrollDelay);
-    }
-    
-    function startTalksAutoScroll() {
-      const container = document.querySelector('.talks-scroll-container');
-      if (!container) return;
-      
-      // Pause on hover
-      container.addEventListener('mouseenter', () => {
-        clearInterval(talksScrollInterval);
-      });
-      
-      container.addEventListener('mouseleave', () => {
-        startTalksAutoScroll();
-      });
-      
-      talksScrollInterval = setInterval(() => {
-        talksScrollPosition += scrollSpeed;
-        const maxScroll = container.scrollHeight - container.clientHeight;
-        
-        if (talksScrollPosition >= maxScroll) {
-          talksScrollPosition = 0; // Reset to top
-        }
-        
-        container.scrollTop = talksScrollPosition;
-      }, scrollDelay);
-    }
-    
-    // Initialize auto-scroll when page loads
-    document.addEventListener('DOMContentLoaded', initAutoScroll);
-  </script>
+  <!-- Auto-scroll functionality removed - Publications and Talks now use manual scrolling only -->
 </body>
 </html>

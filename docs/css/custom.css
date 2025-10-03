@@ -475,8 +475,7 @@
 
 /* Awards Scroll Container and Table Styling */
 .awards-scroll-container {
-    max-height: 400px;
-    overflow-y: auto;
+    /* Removed max-height and overflow-y to display all content without scrolling */
     border: 1px solid #dee2e6;
     border-radius: 8px;
     background-color: #9ca3af;
@@ -549,7 +548,7 @@
 /* Responsive Design for Awards Table */
 @media (max-width: 768px) {
     .awards-scroll-container {
-        max-height: 350px;
+        /* Removed max-height to display all content without scrolling */
     }
     
     .simple-awards-table td {
@@ -566,7 +565,7 @@
 
 @media (max-width: 480px) {
     .awards-scroll-container {
-        max-height: 300px;
+        /* Removed max-height to display all content without scrolling */
     }
     
     .simple-awards-table td {
@@ -854,9 +853,9 @@
 .grant-item {
     flex: 0 0 100%; /* Each item takes full width of the visible container */
     width: 100%; /* Full width */
-    padding: 20px 30px 20px 10px; /* Reduced right padding, minimal left padding to move content right */
+    padding: 10px 30px 10px 10px; /* Reduced padding to minimize gap */
     text-align: left;
-    min-height: 500px; /* Increased height */
+    min-height: auto; /* Remove fixed height to allow natural content flow */
     background-color: transparent;
     border-radius: 8px;
     margin: 0;
@@ -887,11 +886,11 @@
 }
 
 .grant-entry {
-    margin-bottom: 25px;
-    padding-bottom: 15px;
+    margin-bottom: 15px; /* Reduced from 25px */
+    padding-bottom: 10px; /* Reduced from 15px */
     border-bottom: 1px solid #ccc;
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 1.4; /* Slightly tighter line height */
     overflow-wrap: break-word; /* Allow long words to break and wrap */
     word-wrap: break-word; /* Legacy support for word wrapping */
     white-space: normal; /* Ensure text can wrap normally */
